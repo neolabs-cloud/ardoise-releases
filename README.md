@@ -22,7 +22,7 @@
   &nbsp;·&nbsp;
   <a href="https://neolabs.cloud">Website</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/neolabs-cloud/ardoise-releases/releases">Release notes</a>
+  <a href="CHANGELOG.md">Release notes</a>
 </h3>
 
 </div>
@@ -251,7 +251,7 @@ Plans can change. Watch this repository (**Watch › Custom › Releases**) to h
 | | |
 | :-- | :-- |
 | 📖 **[Help center](https://docs.neolabs.cloud)** | Step-by-step guides with screenshots and videos: install, first VM, storage, networking, backups, updates. |
-| 📝 **[Release notes](https://github.com/neolabs-cloud/ardoise-releases/releases)** | What changed in each version. |
+| 📝 **[Release notes](CHANGELOG.md)** | What changed in each version. |
 | 🤝 **[Hands-on help](https://docs.neolabs.cloud/support/)** | Remote help from Neo Labs, sold separately. |
 
 <br>
