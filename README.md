@@ -12,7 +12,7 @@
 
 <a href="https://github.com/neolabs-cloud/ardoise-releases/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/neolabs-cloud/ardoise-releases?style=for-the-badge&label=latest&color=1F7F9A&labelColor=0F1519"></a>
 <a href="https://download.neolabs.cloud/ardoise"><img alt="Downloads" src="https://img.shields.io/github/downloads/neolabs-cloud/ardoise-releases/total?style=for-the-badge&label=downloads&color=1F7F9A&labelColor=0F1519"></a>
-<a href="https://neolabs.cloud"><img alt="Community edition: free" src="https://img.shields.io/badge/community_edition-free-1E9E5A?style=for-the-badge&labelColor=0F1519"></a>
+<a href="https://neolabs.cloud/#pricing"><img alt="Community edition: free" src="https://img.shields.io/badge/community_edition-free-1E9E5A?style=for-the-badge&labelColor=0F1519"></a>
 <img alt="Platform: x86-64 bare metal" src="https://img.shields.io/badge/platform-x86--64_bare_metal-5E6E75?style=for-the-badge&labelColor=0F1519">
 
 <h3>
@@ -180,7 +180,7 @@ Ardoise connects to a host or a management server of the hypervisor you run toda
 | More than one user, with roles | | ✅ | ✅ |
 | Stable update channel | | ✅ | ✅ |
 
-Community is for home labs, learning and evaluation. On first sign-in, the welcome window emails you a free Community key. See [neolabs.cloud](https://neolabs.cloud) for Professional and Enterprise pricing.
+Community is for home labs, learning and evaluation. On first sign-in, the welcome window emails you a free Community key. See [pricing](https://neolabs.cloud/#pricing) for Professional and Enterprise.
 
 ## 🚀 Get started
 
@@ -260,6 +260,6 @@ Plans can change. Watch this repository (**Watch › Custom › Releases**) to h
 
 **If Ardoise looks useful, a ⭐ star helps others find it.**
 
-<sub>Ardoise is made by <a href="https://neolabs.cloud">Neo Labs</a>. This repository holds the installers and release notes; Ardoise itself is not open source.<br>Use is subject to the Neo Labs terms of use.</sub>
+<sub>Ardoise is made by <a href="https://neolabs.cloud">Neo Labs</a>. This repository holds the installers and release notes; Ardoise itself is not open source.<br>Use is subject to the <a href="https://neolabs.cloud/terms/">Terms of Use</a> and <a href="https://neolabs.cloud/privacy/">Privacy Policy</a>.</sub>
 
 </div>
