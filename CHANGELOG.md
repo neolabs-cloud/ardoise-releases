@@ -69,3 +69,12 @@ What changed in each version, newest first. Download the latest version at https
 - **Professional covers up to 3 hosts, each managed on its own.** Ardoise Cluster is in Enterprise, with no limit on hosts.
 
 
+
+## Ardoise 0.9.11
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
+
+### Changed
+- **Ardoise Cluster now comes with Professional too.** Professional allows up to 3 hosts in a cluster; Enterprise has no limit on hosts in a cluster. The limit is per cluster, not on how many hosts you license. A cluster that has a Professional host follows the Professional limit, so for more than 3 hosts every host in it needs Enterprise. Community hosts can't join a cluster.
+
+
