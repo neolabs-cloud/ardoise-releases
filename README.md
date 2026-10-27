@@ -134,7 +134,7 @@
     <td valign="top">
       <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/health-dark.svg"><img src="assets/icons/health-light.svg" width="40" alt=""></picture>
       <h4>Monitoring and alerts</h4>
-      Performance history, events and logs, disk health checks, and email alerts for the events you choose.
+      Performance history, hardware health (power, fans, temperatures, memory, disks), and alerts by email, Microsoft Teams or Slack, plus a weekly health email.
     </td>
   </tr>
   <tr>
@@ -146,12 +146,29 @@
     <td valign="top">
       <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/shield-dark.svg"><img src="assets/icons/shield-light.svg" width="40" alt=""></picture>
       <h4>Secure by default</h4>
-      Signed installers and updates, a host firewall, session locking and an audit trail of sign-ins.
+      Two-step sign-in, signed installers and updates, a host firewall, encrypted secrets and an audit trail of sign-ins.
     </td>
     <td valign="top">
       <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/phone-dark.svg"><img src="assets/icons/phone-light.svg" width="40" alt=""></picture>
       <h4>Phone and tablet ready</h4>
       Check on a host, restart a VM or open a console from your phone or tablet, with layouts made for small screens.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/network-dark.svg"><img src="assets/icons/network-light.svg" width="40" alt=""></picture>
+      <h4>Ardoise Cluster</h4>
+      Manage several hosts from any one of them, move running VMs between hosts and service a host without stopping its VMs.
+    </td>
+    <td valign="top">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/storage-dark.svg"><img src="assets/icons/storage-light.svg" width="40" alt=""></picture>
+      <h4>Shared datastores</h4>
+      Add a NAS share once and every host in the cluster mounts it, so VMs move with no downtime.
+    </td>
+    <td valign="top">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/backup-dark.svg"><img src="assets/icons/backup-light.svg" width="40" alt=""></picture>
+      <h4>Configuration backup</h4>
+      One encrypted file with the host's settings, saved every night, and a guided restore.
     </td>
   </tr>
 </table>
@@ -174,9 +191,12 @@ Ardoise connects to a host or a management server of the hypervisor you run toda
 | VMs | Up to 10, up to 8 vCPUs each | No limit | No limit |
 | Production use | | ✅ | ✅ |
 | Backups and scheduled snapshots | | ✅ | ✅ |
-| Migration, import and export | | ✅ | ✅ |
+| Ardoise Cluster | | Up to 3 hosts per cluster | No host limit |
+| Migration and import | | ✅ | ✅ |
+| Export to OVA and OVF | ✅ | ✅ | ✅ |
 | Clone and templates | | ✅ | ✅ |
-| Email alerts, SNMP and syslog | | ✅ | ✅ |
+| Alerts by email, Microsoft Teams and Slack | ✅ | ✅ | ✅ |
+| SNMP and syslog | | ✅ | ✅ |
 | More than one user, with roles | | ✅ | ✅ |
 | Stable update channel | | ✅ | ✅ |
 
@@ -215,7 +235,7 @@ sha256sum -c ardoise-*-x86_64.iso.sha256
 On Windows PowerShell, compare the output with the checksum on the download page:
 
 ```powershell
-Get-FileHash .\ardoise-0.9.8-x86_64.iso -Algorithm SHA256
+Get-FileHash .\ardoise-0.9.11-x86_64.iso -Algorithm SHA256
 ```
 
 </details>
@@ -239,9 +259,12 @@ timeline
         0.9.5 : Migration, import and export
         0.9.6 : Exports keep the VM's real hardware
         0.9.8 : Welcome window with a free Community key : iPhone, iPad and Mac layouts
+        0.9.9 : Two-step sign-in : Hardware health : Configuration backup : Teams and Slack alerts
+        0.9.10 : Ardoise Cluster : Move running VMs between hosts : Shared datastores
+        0.9.11 : Ardoise Cluster in Professional, up to 3 hosts per cluster
     section Planned
-        Next : More migration sources : Two-factor sign-in
-        Later : Ardoise Cluster : Multi-tenant hosting for service providers : Physical Windows machines
+        Next : Multi-tenant hosting for service providers : Remote support sessions
+        Later : Physical Windows machines : More migration sources
 ```
 
 Plans can change. Watch this repository (**Watch › Custom › Releases**) to hear about each new version.

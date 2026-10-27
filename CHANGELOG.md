@@ -2,28 +2,31 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
-## Ardoise 0.9.8
+## Ardoise 0.9.11
 
-**Update (keeps your VMs):** Host › Manage › Updates › Update now.
+**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
 
-### New
-- **Welcome window on a new host.** The first sign-in walks you through five steps: get a free Community key (enter your name, email and country; the key arrives by email) or paste a key you have, then set the time zone, time server and host name. Nothing to set up for email: Neo Labs licensing sends the key.
+### Changed
+- **Ardoise Cluster now comes with Professional too.** Professional allows up to 3 hosts in a cluster; Enterprise has no limit on hosts in a cluster. The limit is per cluster, not on how many hosts you license. A cluster that has a Professional host follows the Professional limit, so for more than 3 hosts every host in it needs Enterprise. Community hosts can't join a cluster.
 
-### Fixed
-- **No more sign-out when the host is slow to answer.** If the host didn't answer the session check in time (for example while a NAS share was waking up), the portal signed you out. Now it waits and asks again; only the host can end a session.
-- **A slow or cut-off answer no longer breaks the page** (the red "Cannot read properties of null" message): it is retried, and the page reconnects by itself once the host answers.
-- **"Still there?" shows in the browser tab title too,** with the seconds left, so you see it while working in another tab.
-- **Lost connections are recorded.** When the web client loses the host and gets it back, the host's log says which request failed, why, and for how long.
-- **Updates page** shows a new version right after Help › Check for updates finds it (it used to say "Up to date" until you reloaded).
-- **Host page** shows a datastore's new name after a rename.
-- **Long install media names work.** Create VM refused an ISO with a name over 63 characters (Microsoft's Windows Server ISO, for one). File names in datastores can now be up to 200 characters.
+## Ardoise 0.9.10
 
-### iPhone, iPad and Mac
-- **No more zoomed, sliding pages on iPhone.** Text boxes are 16 pt, so Safari no longer zooms in when you tap one (it used to zoom in at sign-in and stay zoomed).
-- **iPhone:** tabs are one row of pills you can swipe, with the open one in view; crowded toolbars keep what fits and put the rest under More; virtual machines and every table show as cards; windows open full screen with their buttons at the bottom; Recent tasks is a small button in the top bar with a running count.
-- **Mac and laptops:** every page fits the window from 1280×720 up; long lists scroll inside their own card.
-- **Datastore browser:** the upload progress sits in the bottom bar, so the page no longer scrolls while an ISO uploads.
+**Update (keeps your VMs):** Host › Manage › Updates › Update now. Update every host to 0.9.10 before you make a cluster: all hosts in a cluster run the same version.
 
+### New (Enterprise)
+- **Ardoise Cluster.** Manage several hosts from any one of them, with no management VM to install. Host › Ardoise Cluster › Create cluster names the cluster and adds the other hosts. Each host is checked before it joins: Enterprise license, same Ardoise version, time, networks and processor. VMs keep running on every host, nothing is erased, and a host belongs to one cluster at a time.
+- **Pairing code to add a host.** On the host that joins: Host › Actions › Allow joining a cluster shows a code like 7KQ4-M2XD-P9WF. Type it, with that host's address, under Add host. The code works once, for 10 minutes, and no password leaves the host. You can also add a host with its root password and its two-step code; the password is used once and never stored.
+- **Sign in on any host.** The Navigator lists the cluster, each host with its status, and Virtual Machines for all hosts. Open a host to manage it as before: storage, networking, backups, updates and the shell all work through the host you signed in on.
+- **One set of users.** Users, roles and two-step sign-in are the same on every host. Add or change a user on any host and the others get it within seconds; a host that was off catches up when it is back.
+- **Move VMs between hosts.** Tick VMs in Virtual Machines, then Move. A running VM moves with no downtime. Its disks stay where they are when they are on a datastore every host sees; otherwise they are copied to the other host while the VM keeps running. A VM that is off moves its files. Each move is checked first (memory, networks, datastore, processor, VM name) and shows in Recent tasks. Moves are encrypted by default (Cluster › Settings).
+- **CPU level for VMs** (Cluster › Settings): when the hosts have different processors, every VM sees the same processor features on every host, so it can move while running. VMs pick it up at their next start.
+- **Shared datastores.** Cluster › Actions › Add shared datastore mounts one NAS share (NFS) on every host at once, or on none if one host can't.
+- **Maintenance mode for a host in a cluster.** Its running VMs move to the other hosts first, to the host with the most free memory unless you pick another. A VM that can't move is shut down and starts again when you exit maintenance.
+- **A host that stops answering** shows as Not responding after 15 seconds, with an alert. Its VMs show as Unknown. Ardoise never starts them elsewhere by itself. Cluster › What to do starts VMs with disks on a shared datastore on another host, only when every other host agrees it is down, its run marks have stopped, and you type its name.
+- **Recent tasks** shows the tasks of every host, with a Host column.
+
+### Changed
+- **Professional covers up to 3 hosts, each managed on its own.** Ardoise Cluster is in Enterprise, with no limit on hosts.
 
 ## Ardoise 0.9.9
 
@@ -47,34 +50,24 @@ What changed in each version, newest first. Download the latest version at https
 - **Host page charts** show their "Last hour / Peak" line again on a 1440 × 900 screen.
 - **Email errors in plain words.** When the email service refuses an alert (a sender it does not allow, a wrong API key, an address on its do-not-send list, a rate limit or an outage), Monitor › Notifications says what happened and what to do, instead of showing the service's raw answer.
 
+## Ardoise 0.9.8
 
+**Update (keeps your VMs):** Host › Manage › Updates › Update now.
 
-## Ardoise 0.9.10
+### New
+- **Welcome window on a new host.** The first sign-in walks you through five steps: get a free Community key (enter your name, email and country; the key arrives by email) or paste a key you have, then set the time zone, time server and host name. Nothing to set up for email: Neo Labs licensing sends the key.
 
-**Update (keeps your VMs):** Host › Manage › Updates › Update now. Update every host to 0.9.10 before you make a cluster: all hosts in a cluster run the same version.
+### Fixed
+- **No more sign-out when the host is slow to answer.** If the host didn't answer the session check in time (for example while a NAS share was waking up), the portal signed you out. Now it waits and asks again; only the host can end a session.
+- **A slow or cut-off answer no longer breaks the page** (the red "Cannot read properties of null" message): it is retried, and the page reconnects by itself once the host answers.
+- **"Still there?" shows in the browser tab title too,** with the seconds left, so you see it while working in another tab.
+- **Lost connections are recorded.** When the web client loses the host and gets it back, the host's log says which request failed, why, and for how long.
+- **Updates page** shows a new version right after Help › Check for updates finds it (it used to say "Up to date" until you reloaded).
+- **Host page** shows a datastore's new name after a rename.
+- **Long install media names work.** Create VM refused an ISO with a name over 63 characters (Microsoft's Windows Server ISO, for one). File names in datastores can now be up to 200 characters.
 
-### New (Enterprise)
-- **Ardoise Cluster.** Manage several hosts from any one of them, with no management VM to install. Host › Ardoise Cluster › Create cluster names the cluster and adds the other hosts. Each host is checked before it joins: Enterprise license, same Ardoise version, time, networks and processor. VMs keep running on every host, nothing is erased, and a host belongs to one cluster at a time.
-- **Pairing code to add a host.** On the host that joins: Host › Actions › Allow joining a cluster shows a code like 7KQ4-M2XD-P9WF. Type it, with that host's address, under Add host. The code works once, for 10 minutes, and no password leaves the host. You can also add a host with its root password and its two-step code; the password is used once and never stored.
-- **Sign in on any host.** The Navigator lists the cluster, each host with its status, and Virtual Machines for all hosts. Open a host to manage it as before: storage, networking, backups, updates and the shell all work through the host you signed in on.
-- **One set of users.** Users, roles and two-step sign-in are the same on every host. Add or change a user on any host and the others get it within seconds; a host that was off catches up when it is back.
-- **Move VMs between hosts.** Tick VMs in Virtual Machines, then Move. A running VM moves with no downtime. Its disks stay where they are when they are on a datastore every host sees; otherwise they are copied to the other host while the VM keeps running. A VM that is off moves its files. Each move is checked first (memory, networks, datastore, processor, VM name) and shows in Recent tasks. Moves are encrypted by default (Cluster › Settings).
-- **CPU level for VMs** (Cluster › Settings): when the hosts have different processors, every VM sees the same processor features on every host, so it can move while running. VMs pick it up at their next start.
-- **Shared datastores.** Cluster › Actions › Add shared datastore mounts one NAS share (NFS) on every host at once, or on none if one host can't.
-- **Maintenance mode for a host in a cluster.** Its running VMs move to the other hosts first, to the host with the most free memory unless you pick another. A VM that can't move is shut down and starts again when you exit maintenance.
-- **A host that stops answering** shows as Not responding after 15 seconds, with an alert. Its VMs show as Unknown. Ardoise never starts them elsewhere by itself. Cluster › What to do starts VMs with disks on a shared datastore on another host, only when every other host agrees it is down, its run marks have stopped, and you type its name.
-- **Recent tasks** shows the tasks of every host, with a Host column.
-
-### Changed
-- **Professional covers up to 3 hosts, each managed on its own.** Ardoise Cluster is in Enterprise, with no limit on hosts.
-
-
-
-## Ardoise 0.9.11
-
-**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
-
-### Changed
-- **Ardoise Cluster now comes with Professional too.** Professional allows up to 3 hosts in a cluster; Enterprise has no limit on hosts in a cluster. The limit is per cluster, not on how many hosts you license. A cluster that has a Professional host follows the Professional limit, so for more than 3 hosts every host in it needs Enterprise. Community hosts can't join a cluster.
-
-
+### iPhone, iPad and Mac
+- **No more zoomed, sliding pages on iPhone.** Text boxes are 16 pt, so Safari no longer zooms in when you tap one (it used to zoom in at sign-in and stay zoomed).
+- **iPhone:** tabs are one row of pills you can swipe, with the open one in view; crowded toolbars keep what fits and put the rest under More; virtual machines and every table show as cards; windows open full screen with their buttons at the bottom; Recent tasks is a small button in the top bar with a running count.
+- **Mac and laptops:** every page fits the window from 1280×720 up; long lists scroll inside their own card.
+- **Datastore browser:** the upload progress sits in the bottom bar, so the page no longer scrolls while an ISO uploads.
