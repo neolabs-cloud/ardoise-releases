@@ -2,6 +2,24 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.12
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster. Tenants and tenant users wait until every host of the cluster runs 0.9.12.
+
+### New
+- **Tenants, for MSPs** (Enterprise with the Tenant hosting add-on). One cluster, or one host, can now hold many client companies, each kept apart. A tenant has its own VMs, its own port group (VLAN) on every host, its own limits, its own users, its own backup job and a monthly usage report. Navigator › Tenants lists them with what each one uses.
+- **New tenant** walks you through five steps: name and color, network, limits, users and backups, review. The color picker has a color area, hue, hex and RGB, an eyedropper and 24 quick picks, so a tenant can match the client's brand color; it warns when a color is close to another tenant's. Ardoise makes the tenant's port group on every host of the cluster, so its VMs can move between hosts.
+- **Limits** for each tenant: vCPUs and memory of running VMs, and the full size of every disk, on or off, counted across every host. Creating, starting, growing or moving a VM into a tenant past a limit is refused with how much is left. A tenant can be limited to some datastores.
+- **Move to a tenant** (Virtual Machines › Actions): puts VMs you have into a tenant, and can move their network adapters to the tenant's port group. VMs keep running. A Tenant column and a Viewing switch in the Navigator show one tenant's VMs at a time.
+- **Tenant users.** Two roles: Tenant admin (consoles, power, snapshots, restore their own backups, create VMs within the limits, invite users) and Viewer (sees the VMs and their state). They are invited by email with a link that works once, for 72 hours; they choose their own password and set up two-step sign-in, which is always on for them. They sign in at the same address and see only their own company: never the hosts, other tenants, storage, the physical network, the license or updates.
+- **Tenant backups.** Each tenant can have its own backup job; every host backs up the tenant's VMs it runs. Tenant admins see their backups, restore them and back up now.
+- **Usage report** (Tenants › Usage report): averages per tenant for the month (vCPUs, memory, storage, backup space, VMs, share of time running), counted every hour on every host. Download it as a CSV for your billing system, and have it emailed on the 1st to you and, if you want, to each tenant's contact.
+- **Tenant hosting on Licensing:** tenants in use of the tenants your license covers. Tenant hosting is sold by Neo Labs sales (hello@neolabs.cloud): billed per tenant, monthly, from 3 tenants. If it ends, existing tenants keep running; only new tenants can't be made.
+
+### Fixed
+- **Nothing is cut off on short screens.** On a laptop screen the page scrolls instead: hardware tables, migration sources and the last cards on a page show in full, and the VM list headers wrap.
+
+
 ## Ardoise 0.9.11
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
