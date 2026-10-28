@@ -192,6 +192,7 @@ Ardoise connects to a host or a management server of the hypervisor you run toda
 | Production use | | ✅ | ✅ |
 | Backups and scheduled snapshots | | ✅ | ✅ |
 | Ardoise Cluster | | Up to 3 hosts per cluster | No host limit |
+| Tenants for service providers | | | Tenant hosting add-on |
 | Migration and import | | ✅ | ✅ |
 | Export to OVA and OVF | ✅ | ✅ | ✅ |
 | Clone and templates | | ✅ | ✅ |
@@ -235,7 +236,7 @@ sha256sum -c ardoise-*-x86_64.iso.sha256
 On Windows PowerShell, compare the output with the checksum on the download page:
 
 ```powershell
-Get-FileHash .\ardoise-0.9.11-x86_64.iso -Algorithm SHA256
+Get-FileHash .\ardoise-0.9.12-x86_64.iso -Algorithm SHA256
 ```
 
 </details>
@@ -262,8 +263,9 @@ timeline
         0.9.9 : Two-step sign-in : Hardware health : Configuration backup : Teams and Slack alerts
         0.9.10 : Ardoise Cluster : Move running VMs between hosts : Shared datastores
         0.9.11 : Ardoise Cluster in Professional, up to 3 hosts per cluster
+        0.9.12 : Tenants for service providers : Tenant users and backups : Monthly usage report
     section Planned
-        Next : Multi-tenant hosting for service providers : Remote support sessions
+        Next : Remote support sessions
         Later : Physical Windows machines : More migration sources
 ```
 
