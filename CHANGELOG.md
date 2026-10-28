@@ -14,7 +14,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Add PCI device** in a VM's Edit settings (VM powered off), from the devices switched on for passthrough. It shows under Devices and on the VM's Summary.
 - **Rules that keep it safe:** a device belongs to one running VM at a time (a second VM is refused at power on, with the name of the one using it); a VM with a device stays on its host (moves and maintenance mode shut it down instead) and takes snapshots without memory; a device is never taken from a running VM; only host administrators can change PCI devices, and tenant users never see them.
 
-
 ## Ardoise 0.9.12
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster. Tenants and tenant users wait until every host of the cluster runs 0.9.12.

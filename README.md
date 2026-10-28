@@ -236,7 +236,7 @@ sha256sum -c ardoise-*-x86_64.iso.sha256
 On Windows PowerShell, compare the output with the checksum on the download page:
 
 ```powershell
-Get-FileHash .\ardoise-0.9.13-x86_64.iso -Algorithm SHA256
+Get-FileHash .\ardoise-0.9.14-x86_64.iso -Algorithm SHA256
 ```
 
 </details>
@@ -265,6 +265,7 @@ timeline
         0.9.11 : Ardoise Cluster in Professional, up to 3 hosts per cluster
         0.9.12 : Tenants for service providers : Tenant users and backups : Monthly usage report
         0.9.13 : PCI passthrough : Graphics for Plex and Jellyfin transcoding
+        0.9.14 : Reliable network unplug : Paste text in the console
     section Planned
         Next : Remote support sessions
         Later : Physical Windows machines : More migration sources
