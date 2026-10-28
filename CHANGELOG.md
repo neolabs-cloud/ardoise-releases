@@ -17,7 +17,6 @@ What changed in each version, newest first. Download the latest version at https
 ### New
 - **Paste text in the console.** Paste text types what you paste into the VM, one key at a time, for VMs without a shared clipboard.
 
-
 ## Ardoise 0.9.13
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
