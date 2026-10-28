@@ -2,6 +2,19 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.13
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
+
+### New
+- **PCI passthrough.** Give a VM a real device of the host: a graphics card or the processor's built-in graphics (hardware video encoding for Plex or Jellyfin), a network port, a USB controller, a Wi-Fi card, a disk controller. Host › Manage › Hardware › PCI devices lists every device with what it is, whether it is passed through, and which VMs use it.
+- **Turn on passthrough once per host.** Ardoise turns on the processor's device isolation (Intel VT-d or AMD-Vi), which needs one restart: now, or at the next restart. If the firmware has it off, the page says so and what to turn on in the BIOS or UEFI setup.
+- **Toggle passthrough without a restart.** Select a device and press Toggle passthrough: the host lets go of it in a few seconds. A device whose driver can't let go while the host runs switches over at the next restart, and the page offers Restart host. Devices that must move together (an isolation group) are shown before you confirm, and the dialog warns when the host's own screen goes blank.
+- **Devices Ardoise needs are locked:** the system disk, datastore disks and the network ports of virtual switches, including the management network. Each shows why. Chipset parts that can't be passed through are under Show all devices.
+- **Add PCI device** in a VM's Edit settings (VM powered off), from the devices switched on for passthrough. It shows under Devices and on the VM's Summary.
+- **Rules that keep it safe:** a device belongs to one running VM at a time (a second VM is refused at power on, with the name of the one using it); a VM with a device stays on its host (moves and maintenance mode shut it down instead) and takes snapshots without memory; a device is never taken from a running VM; only host administrators can change PCI devices, and tenant users never see them.
+
+
 ## Ardoise 0.9.12
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster. Tenants and tenant users wait until every host of the cluster runs 0.9.12.
