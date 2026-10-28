@@ -19,7 +19,6 @@ What changed in each version, newest first. Download the latest version at https
 ### Fixed
 - **Nothing is cut off on short screens.** On a laptop screen the page scrolls instead: hardware tables, migration sources and the last cards on a page show in full, and the VM list headers wrap.
 
-
 ## Ardoise 0.9.11
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
