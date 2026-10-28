@@ -2,6 +2,22 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.14
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
+
+### Fixed
+- **Unplugged network cards now really stay unplugged.** A VM started with its network unplugged (a migration's boot check, or Connected unticked while it was off) could still send and receive traffic. Ardoise now cuts the cable in the running VM itself on every start, plug-in and unplug, checks it again every 5 seconds, and stops a VM that should be unplugged when it can't be. Ticking Connected brings the network back at once.
+- **Adding drivers during a migration or import works again.** It stopped with "not a datastore folder", so migrated VMs kept SATA disks and E1000e network cards. A problem like this now shows on the migration's row and in its boot check, not only in the log.
+- **Boot checks are honest about Linux.** When the guest agent never answers and only the screen stopped changing, the check says Likely started (not Passed) and asks you to look at the console.
+- **Migration sizes** show what the disks really hold (the source often reports a few KB for a VM that is off), and the list shows datastores by their name.
+- **The VM page** picks up a VM that was shut down from inside within 5 seconds.
+- **Nothing cut off:** long disk models, VM names, guest OS names and notes in Pick VMs wrap instead of ending in "...". Network ports used by a virtual switch read the same on every row of PCI devices.
+
+### New
+- **Paste text in the console.** Paste text types what you paste into the VM, one key at a time, for VMs without a shared clipboard.
+
+
 ## Ardoise 0.9.13
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
