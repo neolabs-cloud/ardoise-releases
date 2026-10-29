@@ -2,6 +2,22 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.18
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts. The update installs Tailscale when the host can reach the internet; it stays off until you set it up.
+
+### New
+- **Ardoise Converter: Windows or Linux machines into VMs.** Migration › New migration › Windows or Linux machine copies a running server, desktop or laptop (physical, or a VM on any other hypervisor or cloud) into a new VM on this host. Ardoise gives you one command to paste on the machine: PowerShell for Windows (ScreenConnect backstage, a remote console or an RMM script) or a shell command for Linux. Nothing is installed in Windows and nothing needs signing. Windows is copied live from a Windows shadow copy, so users keep working and files, SQL and Active Directory stay consistent; Linux is copied live with no snapshot, so stop databases and busy services first. Only used space is sent, compressed, and the copy picks up where it stopped when the connection drops. Then the usual guest preparation adds the VM drivers, the VM can keep the machine's IP address and MAC address, and the boot check starts it with its network unplugged. Windows Server 2012 R2 and newer, Windows 10 and 11; Ubuntu, Debian, Red Hat, Rocky and Alma with Python 3 and lsblk 2.27 or newer (not CentOS or RHEL 7). If the Ardoise service restarts during a copy, the machine sends again what was lost and carries on. Cancel copy on the Migration page stops a copy.
+- **Migrate from other locations over Tailscale.** Networking › Tailscale puts the host on your own tailnet (free or paid plan) with an OAuth client or auth keys, so you can also manage it from anywhere. A migration from another location installs Tailscale on the machine (Windows 10 or Server 2016 and newer) with a one-time key; with the policy rules Ardoise shows, it reaches only this host's migration port, shows the upload speed and the time it will take, can hold back during the site's business hours, and removes Tailscale when the copy ends (a Tailscale the machine already had stays).
+
+### Fixed
+- **Updates card** no longer says Up to date right after a restart or when a check failed: it keeps what the last check found, and says Not checked yet or Couldn't check.
+- **Upload percent** in the Datastore browser matches Recent tasks.
+- **Greyed-out actions say why**, for example "Shut down the VM to delete it" or "Administrators only".
+- **Host page** shows the ISO library by its datastore name.
+- **Sign-in for non-administrators** without a license no longer links to the website; it says to ask an administrator.
+
+
 ## Ardoise 0.9.17
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
