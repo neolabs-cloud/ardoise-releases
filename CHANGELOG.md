@@ -10,7 +10,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Send keys** in the VM console: the shortcuts your computer keeps for itself, sent to the VM in one click. Windows: Ctrl+Alt+Del, Windows key, Alt+Tab, Alt+F4. Linux: Ctrl+Alt+F1 (login screen), Ctrl+Alt+F2, Ctrl+Alt+F7 (back to the desktop), Ctrl+C. Send Ctrl+Alt+Del moved into this menu.
 - **On-screen keyboard** in the VM console: a full keyboard under the screen; click any key. Ctrl, Alt, Shift and Win stay held until the next key, so Ctrl, Alt, F1 sends Ctrl+Alt+F1. On a phone the keys are sized to fit.
 
-
 ## Ardoise 0.9.14
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
