@@ -2,6 +2,24 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.16
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or (new) Cluster › Updates › Update all hosts. Linux VMs get the text console from their next power off and on.
+
+### New
+- **Update a whole cluster with one button.** Cluster › Updates lists every host's version and what happens to its VMs. Update all hosts does them one at a time: the host's VMs move to the others, it updates and restarts if needed, comes back healthy, and its VMs move back. You choose the order; the host you are signed in on goes last. VMs that can't move (local disks, PCI devices) shut down and start again after, or that host is skipped, as you choose. Stop after this host ends it cleanly, and the job carries on by itself after this host's own update.
+- **Text console.** A plain terminal next to the screen in the VM console (Screen and Text at the top). It doesn't use the video card, so it keeps working when the screen can't, such as a VM with a graphics card passed through. Linux shows a login prompt on it by itself. It's on for every Linux VM from its next power on; Edit settings › VM Options › Console turns it off. Paste text, Send keys and the keyboard work in both.
+- **Guest tools for Linux without internet.** Install guest tools on a Linux VM puts a guest tools disc in its CD/DVD drive with the guest agent for Ubuntu 22.04 to 26.04, Debian 12 and 13, and Red Hat, Rocky and Alma 8 to 10. Copy the one command, or press Type it in the console. The network can stay unplugged. Ardoise ejects the disc once the agent answers.
+- **Windows setup answered when deploying from a template.** For Sysprep templates, Deploy VM can set the computer name (the VM's name), time zone, Administrator password, product key and join a domain. The answers ride on a small disc only that VM sees; Ardoise removes it once the VM is up, and the passwords are not kept.
+- **Configuration copies to cloud storage.** The nightly configuration backup can go to cloud storage that speaks the S3 protocol, from any provider, so a host that is lost can be rebuilt from a copy kept elsewhere. Test connection checks the key first. Copies are encrypted with the backup passphrase before they leave the host, and the key is kept encrypted on the host.
+- **Firmware ROM file for PCI devices.** The few graphics cards that only start in a VM with their own ROM file can use one from a datastore (Edit settings › PCI device › Firmware ROM).
+
+### Fixed
+- **Edit settings follows the VM.** It no longer says Running for a VM that was shut down while the window was open (or the other way round).
+- **Cluster actions for another host reach that host.** Entering or leaving maintenance mode, moving VMs and starting VMs elsewhere from the cluster page now always act on the host you picked.
+- **A VM with a graphics card passed through** shows a note on its Summary: the screen can stop updating, and the Text console always works.
+
+
 ## Ardoise 0.9.15
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now, on every host of a cluster.
