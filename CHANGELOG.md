@@ -2,6 +2,18 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.17
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
+
+### New
+- **Protect console for Linux VMs with a graphics card.** With a graphics card passed through (an integrated one above all), Linux's screen driver can slow to a crawl and hold the console while it does. Services that use the console, SSH among them, then wait forever. A Linux VM with a graphics card now shows Protect console on its Summary. Through the guest tools, Ardoise switches the guest to Linux's simple built-in screen driver and turns on the Text console login prompt, then restarts the guest if you want. The graphics card itself isn't touched. Undo it from Actions.
+- **The Text console login prompt turns on by itself.** Linux looked for consoles before the text console showed up, so it could stay blank. Once the guest tools answer, Ardoise turns the login prompt on in the guest, one time, and it stays on through restarts. Edit settings › VM Options › Console › Login prompt turns this off. If the Text console is still blank, a bar at the top offers Turn on the login prompt. The Linux guest tools disc does it too.
+
+### Fixed
+- **Shut down and Restart guest OS no longer hang the VM page.** Ardoise used to wait on the guest tools while they were busy shutting the guest down, so the page stayed on Loading. Now the request returns at once, and anything the guest tools can't answer within a few seconds shows as Busy. The page says Shutting down, and if the guest is still running after 5 minutes it offers Power off now. It never powers off by itself.
+
+
 ## Ardoise 0.9.16
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or (new) Cluster › Updates › Update all hosts. Linux VMs get the text console from their next power off and on.
