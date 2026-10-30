@@ -2,6 +2,14 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.19
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
+
+### Fixed
+- **Moving VMs between cluster hosts.** Every move to another host stopped at "Connecting to the other host" with "can't reach the other host's hypervisor". Moves now connect, live or powered off, with or without copying the disks.
+
+
 ## Ardoise 0.9.18
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts. The update installs Tailscale when the host can reach the internet; it stays off until you set it up.
