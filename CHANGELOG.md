@@ -2,6 +2,31 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.20
+
+**Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts (every host needs 0.9.19 or later for that).
+
+### New
+- **Time zone help.** When a host's time zone isn't your browser's, the Host page says so, with one button to use your browser's zone (nothing changes until you press it). Cluster › Settings › Time zone shows every host's zone and sets one zone on all of them; each host keeps its own time servers.
+- **Setup checks licensing again by itself.** Right after a host starts, its network may not be up yet: the Welcome screen now checks again every few seconds and turns on "Get a free Community key" as soon as licensing answers. It says why it can't reach licensing, and has Try again.
+- **Browser tabs name the host** ("ardoise-02 · Ardoise"), so several hosts are easy to tell apart.
+
+### Better
+- **Moving VMs:** the progress shows the disk copy and the memory copy apart, in GB with the speed, and the VM list shows the VM on its new host as soon as the move ends.
+- **Update all hosts** checks first that every host can move VMs (0.9.19 or later) and says which one to update by itself, instead of stopping halfway.
+- **After a drop to Community**, VMs keep running and can still be edited and started; only adding more vCPUs than Community allows is refused.
+- **Creating a cluster:** if creating fails, try again without adding the hosts back. The version check only ever suggests updating the older host.
+- **Installer:** a disk from an earlier install (Proxmox and other LVM or RAID setups) is released before it is erased, so the install no longer stops at "partprobe".
+- **Tailscale setup:** the connect dialog asks for an OAuth client with only the tag tag:ardoise, and the policy rules it shows let that tag own tag:ardoise-migrate, so Tailscale makes both kinds of keys.
+
+### Fixed
+- The user menu names the host you signed in on, also while you look at another host of the cluster.
+- The Ardoise Converter's source choice (this network or over Tailscale) shows which one is picked.
+- Tenant hosting on a not-for-resale or trial key says it is not billed.
+- The Tenants page says "one host" on a host that is not in a cluster.
+- The setup's "Set a fixed address later" shows only when the address comes from DHCP.
+
+
 ## Ardoise 0.9.19
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
