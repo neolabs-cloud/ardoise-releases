@@ -2,6 +2,21 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.21
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **Backups follow a moved VM.** When a VM moves to another host (by hand, in maintenance mode or during Update all hosts), it leaves its backup jobs on the old host and joins the job of the same name on the new host, which is made with the same schedule, number kept and datastore when it isn't there yet. Backups made so far stay where they were and can still be restored there. The move's event says what happened.
+- **Shared datastores for backups.** A new backup job in a cluster lists the datastores every host mounts first, marked "every host", and picks one by default, so backups stay in one place wherever the VM runs.
+
+### Fixed
+- **Consoles of VMs on another host** of the cluster opened and closed at once ("This console is closed"). The screen and the text console now open from any host.
+- **Switching hosts in the navigator:** clicking another host while on a Host page now opens it, without going through the cluster first.
+- **Update all hosts** found no update until the host checked by itself once a day: Cluster › Updates checks when it opens and has a Check for updates button.
+- **A backup of a VM that moved away** says which host it runs on now, instead of "VM not found".
+
+
 ## Ardoise 0.9.20
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts (every host needs 0.9.19 or later for that).
