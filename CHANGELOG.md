@@ -2,6 +2,26 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.24
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### Fixed
+- **The host console always stays visible.** The graphics that drive the host's screen always stay with Ardoise and can't be passed through, with no override. To pass a GPU to a VM, install a separate graphics card. Hosts that had passed their console graphics to a VM get it back at the update, with a notice; a running VM keeps running and the device is removed from its settings at its next power on.
+- **The new host console no longer goes black** when the graphics driver takes over the screen during startup, and it uses a fraction of the CPU.
+- **NAS datastores reconnect by themselves** after the NAS or the network comes back, and Try again works.
+- **You stay signed in while you work.** The session renews as you use the web client, and signing in again returns you to the same page with dialogs closed.
+- **Install tasks finish cleanly** and only one install runs at a time.
+- **Cluster updates are offered when any host is behind**, and the cluster says when every host runs the same version.
+- **Safer passthrough:** every way a VM starts checks its devices, and passthrough settings are saved safely through power loss.
+
+### New
+- **Ardoise boot screen** on every start, including safe starts. If a start takes longer than usual, press Esc to see what's happening.
+- **Restart for a new kernel** without a full update, when a host has one waiting.
+- **VM startup order:** set each VM's start position in VM Options, with Change order.
+- **Notifications at the top center**, color coded, with a timer line.
+
+
 ## Ardoise 0.9.23
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host. Hosts that need a new kernel restart during their turn while their VMs are on the other hosts.
