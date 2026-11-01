@@ -2,6 +2,18 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.22
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### Fixed
+- **Update all hosts brings the last host's VMs back.** The host you are signed in on goes last; its VMs stayed on the other hosts because they refused the move back for the few seconds before they saw it out of maintenance mode. Ardoise now tries again for up to three minutes, and the card says why if a VM still isn't back.
+- **One row per VM during a live move.** While a VM moves, the list showed it twice: running where it was and paused where it is going. It now shows once, "Moving to ardoise-02", and the arriving copy can't be powered on, off or deleted until the move ends.
+- **The cluster update card shows its progress** every few seconds while it runs, whatever the auto-refresh setting.
+- **Recent moves** keeps its list when a host restarts (an update, for example) instead of saying "No VM moved yet".
+- **A VM that just started or arrived** shows "—" for its CPU and memory until it is first measured, instead of 0.
+
+
 ## Ardoise 0.9.21
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
