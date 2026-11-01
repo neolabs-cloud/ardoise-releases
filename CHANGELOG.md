@@ -2,6 +2,25 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.23
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host. Hosts that need a new kernel restart during their turn while their VMs are on the other hosts.
+
+### Fixed
+- **A host with PCI passthrough always comes back after a restart.** Passed-through devices are now handed to their VMs as the host starts, before the host ever uses them, instead of being taken away from a running driver. The network and the web client no longer wait for passthrough. A host whose only graphics card was passed through could stop at a dark screen and never reach the network.
+- **Automatic safe start.** If a start doesn't finish, the next one skips passthrough by itself and the Host page says so, with Turn passthrough back on. The boot menu also has "Ardoise (safe mode: no passthrough)".
+- **Every host gets the same kernel.** The kernel package is kept on new installs and added by the update when it is missing, and Update all hosts restarts a host when it installed a newer kernel, so it really runs it.
+- **The Host summary shows each host's own management address** when you view another host of the cluster.
+- **The system log no longer fills with password agent lines** every 10 seconds.
+
+### New
+- **The host console is protected.** The graphics card that shows the host console can't be passed through by default ("Used by host console"), so the console stays visible. A host with only one graphics card can still pass it through after typing the host name; the Host summary then shows "Console passed to VM" and the boot menu shows the host's name and address. Administrators can turn this choice off.
+- **A new host console.** A cleaner screen with the host name, management address, status, VMs, and live CPU and memory, readable on 4K monitors. Over SSH and on basic displays, the text console is used, with a larger font on wide screens.
+- **Kernel and BIOS differences** between hosts are flagged in Cluster › Updates.
+- **An email when a cluster host stops answering** for 3 minutes (20 in maintenance mode), and one when it is back.
+- **Last shutdown** on the Host summary: clean, or unexpected (power loss?).
+
+
 ## Ardoise 0.9.22
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
