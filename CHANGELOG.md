@@ -2,6 +2,22 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.25
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **Live updates.** Pages update by themselves the moment something changes: VM power state (Starting, then Running), tasks and their progress, the host summary, storage, backups, alerts, and every host of a cluster. Nothing reloads and open dialogs stay as they are. If the connection drops, a small "Reconnecting…" note shows and pages use your refresh timer until it is back.
+- **How long each VM has been running.** A "Running for" column in the VM list, a "Restarted" tag for 24 hours after a restart nobody made from Ardoise (for example Windows restarting after an update), and a "30+ days" tag when a VM is due for patching. The VM page shows the last restart and how it happened. Both limits can be changed in Host › Manage › System.
+- **Idle sign-out is yours to set.** Host › Manage › Security: 15 minutes up to 8 hours, applied to every host of a cluster. Each person can still choose a shorter time.
+
+### Fixed
+- **Moving a powered-off VM keeps its disk thin** and copies only real data, so it is faster and uses no extra space.
+- **Used space shows right after a move.**
+- **A normal restart shows no "libvirt-guests" error;** VMs still shut down first.
+- **Cluster host tiles:** the address uses the same font as the other details.
+
+
 ## Ardoise 0.9.24
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
