@@ -2,6 +2,24 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.27
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **Networking has two parts.** Host Network is today's page, unchanged: port groups, virtual switches, physical NICs, TCP/IP, firewall and Tailscale. Tenant Networks shows every tenant's LANs and VPN in one place.
+- **Tenant LANs with a built-in router.** New LAN gives a tenant its own private network on its own VLAN, with a gateway, DHCP, DNS and internet access. Ports, Firewall and VPN tabs on each LAN. The router runs on one host and moves to another host by itself if that host goes down. A LAN's range can't overlap your office network, another LAN or the tenant's VPN ranges. Existing tenant VLANs show as LANs with the router off.
+- **WireGuard VPN, included.** Up to 25 devices per LAN. Each device's settings are shown once as a QR code and a file. The VPN address can be a host name, and Ardoise checks the site's public address every 15 minutes and alerts you when it changes.
+- **The tenant's own Tailscale.** Join a LAN to the tenant's tailnet. The tile shows the exact settings to approve the route automatically, so it keeps working when the router moves to another host.
+- **Tenant users see Networking too,** limited to their own LANs, VMs and VPN devices.
+
+### Safety
+- Routers never sit on your office network, never answer for your office gateway or a host, and start with all traffic blocked until their firewall is loaded.
+- Updates and service restarts keep routers running. Only one host runs a router at a time.
+- Hosts with no LANs are not changed. The host's own firewall is never changed.
+- Rolling back to 0.9.26 removes the routers cleanly.
+
+
 ## Ardoise 0.9.26
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
