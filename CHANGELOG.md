@@ -2,6 +2,25 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.26
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **Every screen fits iPhone, iPad and desktop.** The VM list shows each VM as a clean card on iPhone, with its full name, status, running time, used space and guest OS. On iPad and phones held sideways the table scrolls as one piece inside its card. The Host summary puts one fact per line and each chart in its own tile. Buttons are easy to tap, dialogs fit phones held sideways, and long lines such as Startup order wrap instead of being cut off.
+- **Backups named after the VM.** Each backup is a folder named after the VM and the date and time, holding the VM's settings and disks under its own name, with a HOW-TO-RESTORE.txt in each VM's folder. Older backups keep working.
+- **Backups page grouped by VM.** Folders that open and close, Restore, Browse and Delete on each backup, and the last 10 days as colored dots (backed up, warning, failed, none) with a legend.
+- **One folder per cluster or host on shared storage.** On a NAS datastore, a cluster or host keeps its backups, settings backups, ISOs and templates in its own top folder, so it is clear whose files are whose. A one-time "Organize datastore folders" task moves older files that clearly belong to this cluster or host, and leaves anything else where it is. In a cluster it waits until every host runs 0.9.26.
+- **Restore any backup on the NAS, on any host.** Backups made by another host on the same shared storage are listed with the host that made them and a health check. Restore one as a new VM on this host after a compatibility check, choosing its name, datastore and networks. The original backup is never changed. Register VM on a backup folder now offers to restore it.
+- **Guest OS set automatically.** Create VM picks Windows or Linux from the installer ISO. Once the guest tools run, a VM left as Other or set to the wrong family is corrected (it applies at the next power off). A family you chose yourself is never changed. Imports and migrations bring the right family too.
+- **Tenants: Company acronym.** The New tenant form suggests the acronym from the company name (for example ATS) and accepts 2 to 10 letters or digits in any case. It can be changed later under the tenant's Settings.
+
+### Fixed
+- **"More" menus on phones** stayed closed when tapped. They open now.
+- **Renaming a VM** no longer stops its backup and snapshot jobs.
+- **Imported disks and OVF files** no longer come in as guest OS Other when the source says what they are.
+
+
 ## Ardoise 0.9.25
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
