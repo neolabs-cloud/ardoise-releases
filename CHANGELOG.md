@@ -2,6 +2,26 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.28
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **New tenant in four clear steps.** Company, Network, Resources and backups, Review. Each step shows where you are and what comes next. The Network step can create the tenant's LAN with its router in one go, after checking on every host that the VLAN is free and the range doesn't overlap your networks. The Resources step shows how much of the cluster each limit uses. Review lists exactly what will happen.
+- **Tenants are for MSP admins only.** Creating a tenant sends no email and creates no account. Client staff never get a sign-in on your hosts.
+- **Upgrade from the ISO.** Booting the Ardoise ISO on a host that already runs Ardoise offers Upgrade, which keeps your VMs, settings and license. Erase and install is still there. An older ISO refuses to upgrade a newer version.
+- **VM addresses without guest tools.** The VM page shows a VM's IPv4 address as soon as the network sees it, marked "from the network".
+
+### Improved
+- **VirtIO by default** for Linux VMs and nested Ardoise hosts. Windows is unchanged.
+- **Ardoise running as a VM** gets no guest tools disc or Install link: "Not needed for an Ardoise host".
+- **Guest tools status** now says Running, Installed but not running, or Not installed.
+- **Console screen:** Memory has its own graph like CPU, and memory reads in GB everywhere.
+- **"Before that" is now "Previous run"** on the VM page.
+- **Examples use example.com** in every field.
+- **Clearer update failures:** a failed update says whether the previous version was put back, and where the log is.
+
+
 ## Ardoise 0.9.27
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
