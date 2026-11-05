@@ -2,6 +2,28 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.29
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### New
+- **Virtual Machines as a tree.** Your own VMs grouped by host, then each tenant as its own group. Every group opens and closes, with Open all and Close all. Searching opens the groups that match.
+- **One VM row everywhere.** The cluster list, host lists and tenant pages show the same columns in the same order: name, status, running for, host, used space, guest OS and IP address.
+- **VM icons set by themselves.** Windows and Linux keep their icons. Hosts running inside a VM (Ardoise, Proxmox VE, ESXi, Hyper-V) get a purple Hypervisor icon, and anything else a gray Other icon.
+- **Sign in with Tailscale.** On a tenant LAN's VPN tab, the tenant signs in to their own Tailscale with a link or a QR code. Each tenant joins its own tailnet. After sign-in, the page shows the two steps left in the Tailscale admin console (approve the route, turn off key expiry) and checks them. The OAuth client stays available for clusters.
+- **Tenants in the navigator.** Every tenant is listed under Tenants with its VM count. The "Viewing" switch is gone.
+
+### Improved
+- **VM addresses on real hosts.** The address finder now hears VMs whose ports are plugged into a virtual switch, as on every real host.
+- **Installer:** one color set on every screen, each disk says what is on it (and the installer media is never offered), the boot menu reads "Install or upgrade Ardoise", the license fits its window, "installer media" instead of "USB drive", and the installer ejects the CD by itself before it restarts.
+- **Tenant Settings** has the New tenant look: color swatches, units inside the fields and a Nightly backup switch. The tenant page gains Network and Backups tabs.
+- **Create VM** starts on "None (your own VM)", shows units inside the fields and the VM's icon, and shows the Windows note only for Windows.
+- **Ardoise host in Edit settings.** A nested Ardoise made before 0.9.28 can be marked as an Ardoise host: no guest tools offer, Hypervisor icon.
+- **New tenant, step 3:** going over the cluster's vCPUs reads calmly (that's normal), memory over the cluster shows in amber, and the hints line up.
+- **New tenant, Review:** one font throughout.
+- **Console screen:** Memory is drawn on a fixed scale like CPU, so the line's height matches the number.
+
+
 ## Ardoise 0.9.28
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
