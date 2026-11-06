@@ -2,6 +2,23 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+## Ardoise 0.9.30
+
+**Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
+
+### Improved
+- **Faster pages.** Clicking around no longer flashes a blank "Loading..." page: the page you were on stays, dimmed, until the next one is ready. A tenant's Summary and Virtual machines open at once with what was shown last time, then refresh quietly. The Virtual Machines list and tenant pages ask the hosts for less.
+- **Deleting big files no longer slows the host.** Removing old backups or a large file in the datastore browser now frees the space in steps, at low disk priority, so running VMs and the host stay responsive.
+- **Guest OS** no longer repeats the version (for example "Ubuntu 26.04.1 LTS").
+- **Ardoise host** shows as the Guest OS of a VM marked as an Ardoise host.
+- **Tenants list:** the VLAN column uses the normal font and says None when there is no VLAN.
+- **New tenant, step 3:** memory over the cluster shows in amber again.
+- **No slogan.** The slogan is gone from the console screen, text console, installer, sign-in page and README.
+
+### Behind the scenes
+- **Release gate.** Every build now checks, before anything is published, that all tests pass, the version matches everywhere, the installer and upgrade checks pass, and nothing customers see names internal servers.
+
+
 ## Ardoise 0.9.29
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
