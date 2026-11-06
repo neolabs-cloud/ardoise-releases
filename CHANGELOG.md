@@ -18,7 +18,6 @@ What changed in each version, newest first. Download the latest version at https
 ### Behind the scenes
 - **Release gate.** Every build now checks, before anything is published, that all tests pass, the version matches everywhere, the installer and upgrade checks pass, and nothing customers see names internal servers.
 
-
 ## Ardoise 0.9.29
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.

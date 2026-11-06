@@ -4,7 +4,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img alt="Ardoise: virtualization without the licensing shock" src="assets/banner-dark.svg" width="100%">
+    <img alt="NeoLabs Ardoise: virtualization without the licensing shock" src="assets/banner-dark.svg" width="100%">
   </picture>
 </a>
 
@@ -227,7 +227,7 @@ Community is for home labs, learning and evaluation. On first sign-in, the welco
 <summary><b>Check your download</b></summary>
 <br>
 
-Every release here has the ISO, its SHA-256 checksum and a Neo Labs signature. To check the file on Linux or macOS, put the `.sha256` file next to the ISO and run:
+Every release here has the ISO, its SHA-256 checksum and a NeoLabs signature. To check the file on Linux or macOS, put the `.sha256` file next to the ISO and run:
 
 ```bash
 sha256sum -c ardoise-*-x86_64.iso.sha256
@@ -281,7 +281,7 @@ Plans can change. Watch this repository (**Watch › Custom › Releases**) to h
 | :-- | :-- |
 | 📖 **[Help center](https://docs.neolabs.cloud)** | Step-by-step guides with screenshots and videos: install, first VM, storage, networking, backups, updates. |
 | 📝 **[Release notes](CHANGELOG.md)** | What changed in each version. |
-| 🤝 **[Hands-on help](https://docs.neolabs.cloud/support/)** | Remote help from Neo Labs, sold separately. |
+| 🤝 **[Hands-on help](https://docs.neolabs.cloud/support/)** | Remote help from NeoLabs, sold separately. |
 
 <br>
 
@@ -289,6 +289,6 @@ Plans can change. Watch this repository (**Watch › Custom › Releases**) to h
 
 **If Ardoise looks useful, a ⭐ star helps others find it.**
 
-<sub>Ardoise is made by <a href="https://neolabs.cloud">Neo Labs</a>. This repository holds the installers and release notes; Ardoise itself is not open source.<br>Use is subject to the <a href="https://neolabs.cloud/terms/">Terms of Use</a> and <a href="https://neolabs.cloud/privacy/">Privacy Policy</a>.</sub>
+<sub>Ardoise is made by <a href="https://neolabs.cloud">NeoLabs</a>. This repository holds the installers and release notes; Ardoise itself is not open source.<br>Use is subject to the <a href="https://neolabs.cloud/terms/">Terms of Use</a> and <a href="https://neolabs.cloud/privacy/">Privacy Policy</a>.</sub>
 
 </div>
