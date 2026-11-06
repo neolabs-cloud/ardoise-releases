@@ -23,7 +23,6 @@ What changed in each version, newest first. Download the latest version at https
 - **New tenant, Review:** one font throughout.
 - **Console screen:** Memory is drawn on a fixed scale like CPU, so the line's height matches the number.
 
-
 ## Ardoise 0.9.28
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
@@ -43,7 +42,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Examples use example.com** in every field.
 - **Clearer update failures:** a failed update says whether the previous version was put back, and where the log is.
 
-
 ## Ardoise 0.9.27
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
@@ -60,7 +58,6 @@ What changed in each version, newest first. Download the latest version at https
 - Updates and service restarts keep routers running. Only one host runs a router at a time.
 - Hosts with no LANs are not changed. The host's own firewall is never changed.
 - Rolling back to 0.9.26 removes the routers cleanly.
-
 
 ## Ardoise 0.9.26
 
@@ -80,7 +77,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Renaming a VM** no longer stops its backup and snapshot jobs.
 - **Imported disks and OVF files** no longer come in as guest OS Other when the source says what they are.
 
-
 ## Ardoise 0.9.25
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
@@ -95,7 +91,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Used space shows right after a move.**
 - **A normal restart shows no "libvirt-guests" error;** VMs still shut down first.
 - **Cluster host tiles:** the address uses the same font as the other details.
-
 
 ## Ardoise 0.9.24
 
@@ -116,7 +111,6 @@ What changed in each version, newest first. Download the latest version at https
 - **VM startup order:** set each VM's start position in VM Options, with Change order.
 - **Notifications at the top center**, color coded, with a timer line.
 
-
 ## Ardoise 0.9.23
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host. Hosts that need a new kernel restart during their turn while their VMs are on the other hosts.
@@ -135,7 +129,6 @@ What changed in each version, newest first. Download the latest version at https
 - **An email when a cluster host stops answering** for 3 minutes (20 in maintenance mode), and one when it is back.
 - **Last shutdown** on the Host summary: clean, or unexpected (power loss?).
 
-
 ## Ardoise 0.9.22
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
@@ -146,7 +139,6 @@ What changed in each version, newest first. Download the latest version at https
 - **The cluster update card shows its progress** every few seconds while it runs, whatever the auto-refresh setting.
 - **Recent moves** keeps its list when a host restarts (an update, for example) instead of saying "No VM moved yet".
 - **A VM that just started or arrived** shows "—" for its CPU and memory until it is first measured, instead of 0.
-
 
 ## Ardoise 0.9.21
 
@@ -161,7 +153,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Switching hosts in the navigator:** clicking another host while on a Host page now opens it, without going through the cluster first.
 - **Update all hosts** found no update until the host checked by itself once a day: Cluster › Updates checks when it opens and has a Check for updates button.
 - **A backup of a VM that moved away** says which host it runs on now, instead of "VM not found".
-
 
 ## Ardoise 0.9.20
 
@@ -187,14 +178,12 @@ What changed in each version, newest first. Download the latest version at https
 - The Tenants page says "one host" on a host that is not in a cluster.
 - The setup's "Set a fixed address later" shows only when the address comes from DHCP.
 
-
 ## Ardoise 0.9.19
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
 
 ### Fixed
 - **Moving VMs between cluster hosts.** Every move to another host stopped at "Connecting to the other host" with "can't reach the other host's hypervisor". Moves now connect, live or powered off, with or without copying the disks.
-
 
 ## Ardoise 0.9.18
 
@@ -211,7 +200,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Host page** shows the ISO library by its datastore name.
 - **Sign-in for non-administrators** without a license no longer links to the website; it says to ask an administrator.
 
-
 ## Ardoise 0.9.17
 
 **Update (keeps your VMs):** Host › Manage › Updates › Update now on each host, or Cluster › Updates › Update all hosts.
@@ -222,7 +210,6 @@ What changed in each version, newest first. Download the latest version at https
 
 ### Fixed
 - **Shut down and Restart guest OS no longer hang the VM page.** Ardoise used to wait on the guest tools while they were busy shutting the guest down, so the page stayed on Loading. Now the request returns at once, and anything the guest tools can't answer within a few seconds shows as Busy. The page says Shutting down, and if the guest is still running after 5 minutes it offers Power off now. It never powers off by itself.
-
 
 ## Ardoise 0.9.16
 
@@ -240,7 +227,6 @@ What changed in each version, newest first. Download the latest version at https
 - **Edit settings follows the VM.** It no longer says Running for a VM that was shut down while the window was open (or the other way round).
 - **Cluster actions for another host reach that host.** Entering or leaving maintenance mode, moving VMs and starting VMs elsewhere from the cluster page now always act on the host you picked.
 - **A VM with a graphics card passed through** shows a note on its Summary: the screen can stop updating, and the Text console always works.
-
 
 ## Ardoise 0.9.15
 

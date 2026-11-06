@@ -29,7 +29,7 @@
 
 **Ardoise** is a bare-metal hypervisor. Boot the installer on your own server, answer a few questions, and manage hosts, virtual machines, storage and networks from any browser. It feels familiar to anyone who has run virtualization before, and it is priced per host, with no core counting.
 
-*Ardoise* is French for *chalkboard*: build a VM, let it tell its story, and if something goes wrong, erase it and start over.
+*Ardoise* is French for *slate*.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
