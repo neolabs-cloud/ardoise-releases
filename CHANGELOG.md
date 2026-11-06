@@ -2,6 +2,8 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+Ardoise 0.9.31
+
 ## Ardoise 0.9.30
 
 **Update (keeps your VMs):** Cluster › Updates › Update all hosts, or Host › Manage › Updates on each host.
