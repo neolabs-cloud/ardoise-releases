@@ -2,6 +2,8 @@
 
 What changed in each version, newest first. Download the latest version at https://download.neolabs.cloud/ardoise
 
+Ardoise 0.9.43
+
 Ardoise 0.9.42
 
 Ardoise 0.9.41
